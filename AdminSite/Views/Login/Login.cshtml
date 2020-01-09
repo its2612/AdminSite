@@ -1,0 +1,58 @@
+﻿@model AdminSite.Models.adminCredential
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="width:1040px;height:459px;background-color:cornflowerblue;border-radius:15px;">
+<div style="margin:40%;background-color:aqua;border-radius:20px">
+    @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+    {
+        <fieldset>
+            <legend>Admin Panel</legend>
+
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            @if (@ViewBag.Message != null)
+            {
+                <div style="border: 1px solid red">
+                    @ViewBag.Message
+                </div>
+            }
+
+
+            <table>
+                <tr>
+                    <td>@Html.LabelFor(m => m.username)</td>
+                    <td>@Html.TextBoxFor(m => m.username)</td>
+                    <td>@Html.ValidationMessageFor(m => m.username)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(m => m.password)
+                    </td>
+                    <td>
+                        @Html.PasswordFor(m => m.password)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(m => m.password)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Login" />
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </fieldset>
+    }
+    </div>
+
+
+</div>
+
+
+

@@ -1,0 +1,13 @@
+﻿<fieldset>
+    <legend> Admin DashBoard </legend>
+
+    @if (Session["UserName"] != null)
+    {
+        <text >Welcome @Session["UserName"].ToString() </text>
+    }
+
+    @using (Html.BeginForm("Logout", "Login", FormMethod.Post))
+    {
+        <a href="javascript:;" onclick="document.forms[0].submit();">Logout</a>
+    }
+</fieldset>
