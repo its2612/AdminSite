@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RatnoTechModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="productData">
+    <Key>
+      <PropertyRef Name="productId" />
+    </Key>
+    <Property Name="productId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="productName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="productDetails" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+    <Property Name="productImage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="RatnoTechEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="productDatas" EntityType="Self.productData" />
+  </EntityContainer>
+</Schema>

@@ -15,6 +15,6 @@ namespace AdminSite.Models
         public string ProductDetails { get; set; }
         [DisplayName("Upload File")]
         public string ImagePath { get; set; }
-        public HttpPostedFile ImageFile { get; set; }
+        public HttpPostedFileBase ImageFile { get; set; }
     }
 }

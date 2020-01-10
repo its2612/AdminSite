@@ -25,6 +25,7 @@ C:\Users\saurabh.bhushan\Desktop\AdminSiteSolution\AdminSite\bin\Microsoft.AI.Wi
 C:\Users\saurabh.bhushan\Desktop\AdminSiteSolution\AdminSite\bin\Microsoft.ApplicationInsights.dll
 C:\Users\saurabh.bhushan\Desktop\AdminSiteSolution\AdminSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\saurabh.bhushan\Desktop\AdminSiteSolution\AdminSite\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\saurabh.bhushan\Desktop\AdminSiteSolution\AdminSite\bin\MvcFlashMessages.dll
 C:\Users\saurabh.bhushan\Desktop\AdminSiteSolution\AdminSite\bin\System.Web.Helpers.dll
 C:\Users\saurabh.bhushan\Desktop\AdminSiteSolution\AdminSite\bin\System.Web.Mvc.dll
 C:\Users\saurabh.bhushan\Desktop\AdminSiteSolution\AdminSite\bin\System.Web.Razor.dll
@@ -47,4 +48,3 @@ C:\Users\saurabh.bhushan\Desktop\AdminSiteSolution\AdminSite\bin\System.Web.Help
 C:\Users\saurabh.bhushan\Desktop\AdminSiteSolution\AdminSite\bin\System.Web.Mvc.xml
 C:\Users\saurabh.bhushan\Desktop\AdminSiteSolution\AdminSite\obj\Debug\AdminSite.dll
 C:\Users\saurabh.bhushan\Desktop\AdminSiteSolution\AdminSite\obj\Debug\AdminSite.pdb
-C:\Users\saurabh.bhushan\Desktop\AdminSiteSolution\AdminSite\obj\Debug\AdminSite.csprojResolveAssemblyReference.cache

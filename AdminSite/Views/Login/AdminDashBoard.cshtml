@@ -6,6 +6,11 @@
         <text >Welcome @Session["UserName"].ToString() </text>
     }
 
+    <input type="button" class="btn btn-primary" value="Add Data" onclick="window.location.href='@Url.Action("ProductData","Login" )';" />
+
+
+
+
     @using (Html.BeginForm("Logout", "Login", FormMethod.Post))
     {
         <a href="javascript:;" onclick="document.forms[0].submit();">Logout</a>

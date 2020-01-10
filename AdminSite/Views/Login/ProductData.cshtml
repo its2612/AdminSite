@@ -8,7 +8,10 @@
 <h2>ProductData</h2>
 
 
-@using (Html.BeginForm("ProductData", "Login", FormMethod.Post, new{enctype = "multipart/form-data"}))
+@using (Html.BeginForm("ProductData", "Login", FormMethod.Post, new
+{
+    enctype = "multipart/form-data"
+}))
 {
     @Html.AntiForgeryToken()
     
@@ -35,7 +38,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ImagePath, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <input type="file" name="ImageFile" required />  
+                <input type="file" name="ImageFile" required /> 
             </div>
         </div>
 
@@ -50,6 +53,8 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
+
 
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 <script src="~/Scripts/jquery.validate.min.js"></script>

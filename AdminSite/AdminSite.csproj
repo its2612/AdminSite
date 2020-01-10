@@ -84,6 +84,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MvcFlashMessages, Version=0.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvcFlashMessages.0.3.1\lib\MvcFlashMessages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -129,6 +133,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\flash-messages.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -142,6 +147,16 @@
       <DependentUpon>LoginModel.edmx</DependentUpon>
       <LastGenOutput>LoginModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\ProductDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProductDataModel.edmx</DependentUpon>
+      <LastGenOutput>ProductDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ProductDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProductDataModel.edmx</DependentUpon>
+      <LastGenOutput>ProductDataModel.cs</LastGenOutput>
+    </Content>
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="scripts\bootstrap.js" />
@@ -152,6 +167,13 @@
     </EntityDeploy>
     <Content Include="Models\LoginModel.edmx.diagram">
       <DependentUpon>LoginModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\ProductDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ProductDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ProductDataModel.edmx.diagram">
+      <DependentUpon>ProductDataModel.edmx</DependentUpon>
     </Content>
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
@@ -165,7 +187,6 @@
     <Content Include="Web.config" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Login\AdminDashBoard.cshtml" />
-    <Content Include="Views\Login\ProductData.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -191,6 +212,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LoginModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\productData.cs">
+      <DependentUpon>ProductDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductDataModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Models\Registration.cs">
       <DependentUpon>LoginModel.tt</DependentUpon>
@@ -209,6 +248,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Login\ProductData.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
